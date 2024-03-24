@@ -52,10 +52,9 @@ namespace GG.Commands.SignalCommand
 
         private List<string> Converter()
         {
-            var lines = _texter.text.Split(new[] { Environment.NewLine }, StringSplitOptions.None).ToList();
+            var lines = _texter.text.Split(new[] { Environment.NewLine, "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
             return lines;
         }
-
 
         public bool IsValid()
         {

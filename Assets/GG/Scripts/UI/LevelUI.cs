@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using GG.Commands.SignalCommand;
 using GG.Signals;
