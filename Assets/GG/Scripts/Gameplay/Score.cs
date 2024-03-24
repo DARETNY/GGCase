@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace GG.Runtime
 {
@@ -32,7 +33,10 @@ namespace GG.Runtime
             }
         }
 
-        public void LevelEndScore(int leftWords) => this._score -= leftWords * 100;
+        public void LevelEndScore(int leftWords)
+        {
+            this._score -= leftWords * 100;
+        }
         public int GetScore() => _score;
     }
 }

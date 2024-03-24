@@ -1,0 +1,21 @@
+{
+    "name": "GG",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+        "GUID:7793e5cd8d2e94e21b56de41db6606bb",
+        "GUID:91b8298131bc78c4588e0a9713fd5ee2",
+        "GUID:54d572d975bf7e847a172f7b8eebfa89"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

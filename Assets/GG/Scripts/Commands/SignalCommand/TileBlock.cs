@@ -7,7 +7,6 @@ namespace GG.Commands.SignalCommand
 {
     public class TileBlock : IInitializable,IDisposable
     {
-        //todo: every click check any tile is blocked or not or use kernel system dynamicly check each tile
         private SignalBus _signalBus;
 
         public TileBlock(SignalBus signalBus)
