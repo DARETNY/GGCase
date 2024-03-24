@@ -130,6 +130,8 @@ namespace GG.Runtime
             var lastLetter = tableLetters[^1];
             tableLetters.Remove(lastLetter);
             _signalBus.Fire(new UndoActive(tableLetters.Count > 0));
+            _signalBus.Fire(new OnStringComplate(_wordString));
+            _signalBus.Fire(new OnConfirmActivate(_stringChecker.IsValid()));
 
             
         }
