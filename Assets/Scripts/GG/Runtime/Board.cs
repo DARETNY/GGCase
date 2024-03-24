@@ -56,7 +56,9 @@ namespace GG.Runtime
             _signalBus.Subscribe<CallLevel>(LevelSignal);
             _signalBus.Subscribe<LevelEndClick>(LevelEndClick);
             _signalBus.Subscribe<OnClearBoard>(ClearBoar);
+            _signalBus.Subscribe<UndoAllButton>( OnholdTrigger);
         }
+       
 
         private void UnsubscribeFromSignals()
         {
@@ -65,6 +67,7 @@ namespace GG.Runtime
             _signalBus.Unsubscribe<CallLevel>(LevelSignal);
             _signalBus.Unsubscribe<LevelEndClick>(LevelEndClick);
             _signalBus.Unsubscribe<OnClearBoard>(ClearBoar);
+            _signalBus.Unsubscribe<UndoAllButton>(OnholdTrigger);
         }
 
         private void LevelEndClick()
@@ -95,6 +98,17 @@ namespace GG.Runtime
         {
             _wordString = string.Empty;
             tableLetters.Clear();
+        }
+        
+        private void OnholdTrigger()
+        {
+            
+           tableLetters.Clear();
+           _wordString = string.Empty;
+           
+           _signalBus.Fire(new UndoActive(tableLetters.Count > 0));
+           // _signalBus.Fire(new OnStringComplate(_wordString));
+           _signalBus.Fire(new OnConfirmActivate(false));
         }
 
         private void ClearBoar()
